@@ -11,6 +11,7 @@ const PaletteColor = props => {
 
   const handleClick = () => selectPaletteColor(positionInPalette);
 
+  // const cellOpacity = opacity;
   const cellColor = color;
   const styles = {
     width: `${width}%`,

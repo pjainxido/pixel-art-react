@@ -1,7 +1,8 @@
 import React from 'react';
 
-const GRID_INITIAL_COLOR = '#313131';
-const GRIT_INITIAL_OPACITY = 0.5;
+// '#313131';
+const GRID_INITIAL_COLOR = 'rgba(49, 49, 49, 0.5)';
+// const GRIT_INITIAL_OPACITY = 1;
 export default class PixelCell extends React.Component {
   shouldComponentUpdate(nextProps) {
     const keys = ['color', 'width', 'opacity'];
@@ -12,15 +13,15 @@ export default class PixelCell extends React.Component {
   }
   render() {
     const {
-      cell: { color, width, opacity },
+      cell: { color, width },
       id,
       drawHandlers: { onMouseDown, onMouseOver }
     } = this.props;
     const styles = {
       width: `${width}%`,
       paddingBottom: `${width}%`,
-      backgroundColor: color || GRID_INITIAL_COLOR,
-      opacity: opacity || GRIT_INITIAL_OPACITY
+      backgroundColor: color || GRID_INITIAL_COLOR
+      // opacity: opacity || GRIT_INITIAL_OPACITY
     };
 
     return (

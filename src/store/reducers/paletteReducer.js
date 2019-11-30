@@ -27,10 +27,10 @@ const addColorToLastGridCell = (palette, newColor) => {
 
 const createPaletteGrid = () =>
   List([
-    '#000000',
-    '#ff0000',
-    '#e91e63',
-    '#9c27b0',
+    'rgba(0, 0, 0, 0.2)',
+    'rgba(255, 0, 0, 0.5)',
+    'rgba(233, 30, 99, 0.5)',
+    'rgba(156, 39, 176, 0.5)',
     '#673ab7',
     '#3f51b5',
     '#2196f3',
