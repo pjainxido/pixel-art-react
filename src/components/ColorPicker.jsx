@@ -51,7 +51,6 @@ class ColorPicker extends React.Component {
     const { colorPickerOn, paletteColor } = props;
     const isSelected = colorPickerOn && this.state.displayColorPicker;
     const initialPickerColor = paletteColor || '#ffffff';
-
     return (
       <div className="color-picker">
         <button
