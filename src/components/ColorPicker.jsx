@@ -51,7 +51,7 @@ class ColorPicker extends React.Component {
     const { colorPickerOn, paletteColor } = props;
     const isSelected = colorPickerOn && this.state.displayColorPicker;
     const initialPickerColor = paletteColor || '#ffffff';
-    // const initialPickerAlpha =
+
     return (
       <div className="color-picker">
         <button
@@ -93,7 +93,7 @@ const switchColorPickerAction = switchTool(COLOR_PICKER);
 const setPencilToolAction = switchTool(PENCIL);
 const mapDispatchToProps = dispatch => ({
   switchColorPicker: () => dispatch(switchColorPickerAction),
-  setCustomColor: color => dispatch(setCustomColor(color.hex)),
+  setCustomColor: color => dispatch(setCustomColor(color.rgb)),
   setPencilTool: () => dispatch(setPencilToolAction)
 });
 

@@ -96,9 +96,17 @@ const selectPaletteColor = (palette, action) =>
 
 const setCustomColor = (palette, { customColor }) => {
   if (!isColorSelected(palette)) {
+    console.log(customColor);
     return addColorToLastGridCell(palette, customColor);
   }
-  return palette.setIn(['grid', palette.get('position'), 'color'], customColor);
+  const customColorRgba = `rgba(${customColor.r},${customColor.g},${
+    customColor.b
+  },${customColor.a})`;
+  console.log(customColorRgba);
+  return palette.setIn(
+    ['grid', palette.get('position'), 'color'],
+    customColorRgba
+  );
 };
 
 const setPalette = (palette, action) =>
